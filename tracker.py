@@ -13,26 +13,26 @@ pinkLower = (70, 88, 226)
 pinkUpper = (179, 255, 255)
 
 
-def getFrame(queue):
-    # Get frame from queue
-    frame = queue.get()
-    # Convert frame to OpenCV format and return
-    return frame.getCvFrame()
+# def getFrame(queue):
+#     # Get frame from queue
+#     frame = queue.get()
+#     # Convert frame to OpenCV format and return
+#     return frame.getCvFrame()
 
 
-def getMonoCamera(pipeline, isLeft):
-    # Configure mono camera
-    mono = pipeline.createMonoCamera()
+# def getMonoCamera(pipeline, isLeft):
+#     # Configure mono camera
+#     mono = pipeline.createMonoCamera()
 
-    # Set Camera Resolution
-    mono.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
-    if isLeft:
-        # Get left camera
-        mono.setBoardSocket(dai.CameraBoardSocket.LEFT)
-    else:
-        # Get right camera
-        mono.setBoardSocket(dai.CameraBoardSocket.RIGHT)
-    return mono
+#     # Set Camera Resolution
+#     mono.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
+#     if isLeft:
+#         # Get left camera
+#         mono.setBoardSocket(dai.CameraBoardSocket.LEFT)
+#     else:
+#         # Get right camera
+#         mono.setBoardSocket(dai.CameraBoardSocket.RIGHT)
+#     return mono
 
 
 if not args.get("video", False):
